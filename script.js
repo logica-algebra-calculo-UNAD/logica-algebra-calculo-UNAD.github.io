@@ -114,3 +114,64 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const style = document.createElement('style');
 style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }`;
 document.head.appendChild(style);
+
+// ===== COUNTDOWN TIMER =====
+const featuredEvent = document.getElementById('featuredEvent');
+if (featuredEvent) {
+    const eventDate = new Date(featuredEvent.dataset.eventDate);
+    const eventEnd = new Date(featuredEvent.dataset.eventEnd);
+    const countDays = document.getElementById('countDays');
+    const countHours = document.getElementById('countHours');
+    const countMinutes = document.getElementById('countMinutes');
+    const countSeconds = document.getElementById('countSeconds');
+    const countdownStatus = document.getElementById('countdownStatus');
+
+    function updateCountdown() {
+        const now = new Date();
+        let diff, statusText, statusClass;
+
+        if (now < eventDate) {
+            // Evento por venir
+            diff = eventDate - now;
+            statusText = 'Faltan';
+            statusClass = '';
+        } else if (now >= eventDate && now <= eventEnd) {
+            // Evento en curso
+            diff = eventEnd - now;
+            statusText = '&#127881; ¡El evento está EN VIVO ahora!';
+            statusClass = 'live';
+        } else {
+            // Evento pasado
+            diff = 0;
+            statusText = 'Este evento ya finalizó. ¡Pronto anunciaremos el siguiente!';
+            statusClass = 'past';
+        }
+
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            countDays.textContent = String(days).padStart(2, '0');
+            countHours.textContent = String(hours).padStart(2, '0');
+            countMinutes.textContent = String(minutes).padStart(2, '0');
+            countSeconds.textContent = String(seconds).padStart(2, '0');
+        } else {
+            countDays.textContent = '00';
+            countHours.textContent = '00';
+            countMinutes.textContent = '00';
+            countSeconds.textContent = '00';
+        }
+
+        if (statusClass === '') {
+            countdownStatus.textContent = statusText;
+        } else {
+            countdownStatus.innerHTML = statusText;
+        }
+        countdownStatus.className = 'countdown-status ' + statusClass;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
