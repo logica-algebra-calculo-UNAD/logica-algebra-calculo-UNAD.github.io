@@ -119,7 +119,7 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 .blob-1 {
     width: 55vw; height: 55vw; max-width: 700px; max-height: 700px;
     top: -15%; right: -10%;
-    background: radial-gradient(circle at 40% 40%, rgba(30,64,175,0.13), rgba(30,64,175,0.02) 70%);
+    background: radial-gradient(circle at 40% 40%, rgba(30,64,175,0.16), rgba(30,64,175,0.03) 70%);
     animation-duration: 22s;
 }
 .blob-2 {
@@ -144,21 +144,21 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 
 /* Subtle grid */
 .grid-overlay {
-    position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0.25;
+    position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0.3;
     background-image:
         linear-gradient(var(--cream3) 1px, transparent 1px),
         linear-gradient(90deg, var(--cream3) 1px, transparent 1px);
     background-size: 80px 80px;
-    mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 20%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 85% 60% at 50% 50%, black 20%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 60% at 50% 50%, black 20%, transparent 100%);
 }
 
 /* Floating glyphs */
 .glyphs { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .glyphs span {
     position: absolute; left: var(--gx); top: var(--gy);
-    font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2.5rem);
-    color: var(--red); opacity: 0.06; font-weight: 400;
+    font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--red); opacity: 0.055; font-weight: 400;
     animation: glyph-drift 18s ease-in-out infinite;
 }
 .glyphs span:nth-child(even) { animation-direction: reverse; animation-duration: 22s; }
@@ -169,6 +169,41 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 
 /* Hero content */
 .hero-inner { position: relative; z-index: 2; text-align: center; max-width: 800px; }
+
+/* Hero side panels */
+.hero-side {
+    position: absolute; top: 50%; z-index: 2;
+    display: flex; flex-direction: column; gap: 16px;
+    transform: translateY(-50%);
+}
+.hero-side-l { left: clamp(20px, 3vw, 60px); }
+.hero-side-r { right: clamp(20px, 3vw, 60px); }
+
+.side-card {
+    padding: 20px; border-radius: 16px; width: 170px;
+    background: rgba(255,255,255,0.55); border: 1px solid var(--cream3);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.5s var(--ease), box-shadow 0.4s;
+    animation: side-float 8s ease-in-out infinite;
+}
+.side-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15,23,42,0.06); }
+.side-card-1 { animation-delay: 0s; }
+.side-card-2 { animation-delay: -2s; margin-left: 24px; }
+.side-card-3 { animation-delay: -1s; }
+.side-card-4 { animation-delay: -3s; margin-right: 24px; }
+@keyframes side-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.sc-icon { width: 36px; height: 36px; color: var(--red); opacity: 0.6; margin-bottom: 10px; }
+.sc-icon svg { width: 100%; height: 100%; }
+.sc-label { display: block; font-size: 0.72rem; font-weight: 700; color: var(--ink2); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.sc-formula { display: block; font-family: var(--mono); font-size: 0.78rem; color: var(--ink3); font-weight: 400; }
+
+@media (max-width: 1200px) {
+    .hero-side { display: none; }
+}
 .hero-chip {
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
