@@ -181,23 +181,10 @@ img { max-width: 100%; display: block; }
     border-radius: var(--radius-lg); border: 1px solid var(--border); transition: var(--transition);
 }
 .director-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: rgba(200,16,46,0.15); }
-.director-leader {
-    grid-column: 1 / -1; max-width: 700px; margin: 0 auto 8px;
-    background: linear-gradient(135deg, #1A1A2E 0%, #2D2D44 100%); color: white;
-    border: 1px solid rgba(200,16,46,0.3); padding: 36px;
-}
-.director-leader:hover { border-color: rgba(200,16,46,0.5); box-shadow: var(--shadow-lg), 0 0 40px rgba(200,16,46,0.1); }
-.director-leader .director-course { color: rgba(255,255,255,0.6); }
-.director-leader .director-role { color: rgba(255,255,255,0.7); }
-.director-leader .director-email-btn { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.15); }
-.director-leader .director-email-btn:hover { background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.3); }
-.director-leader .director-cvlac-btn { background: rgba(200,16,46,0.15); color: rgba(255,255,255,0.8); border-color: rgba(200,16,46,0.3); }
-.director-leader .director-cvlac-btn:hover { background: rgba(200,16,46,0.3); color: white; }
 .director-avatar {
     flex-shrink: 0; width: 110px; height: 110px; border-radius: 50%; overflow: hidden;
     border: 3px solid rgba(200,16,46,0.15);
 }
-.director-leader .director-avatar { width: 130px; height: 130px; border-color: rgba(200,16,46,0.4); }
 .director-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .director-avatar-initials {
     background: linear-gradient(135deg, var(--unad-red), #E85D75);
@@ -206,18 +193,17 @@ img { max-width: 100%; display: block; }
 }
 .director-info { flex: 1; min-width: 0; }
 .director-info h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 4px; }
-.leader-badge {
-    display: inline-block; padding: 4px 14px; background: var(--unad-red); color: white;
-    border-radius: 100px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px;
-    text-transform: uppercase; margin-bottom: 8px;
+.director-badge {
+    display: inline-block; padding: 4px 14px; background: var(--unad-light); color: var(--unad-red);
+    border-radius: 100px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 8px; border: 1px solid rgba(200,16,46,0.15);
 }
-.director-role { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 2px; font-weight: 500; }
 .director-course { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; }
 .director-contact { display: flex; flex-direction: column; gap: 8px; }
 .director-email-btn, .director-cvlac-btn {
     display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px;
     border-radius: 8px; font-size: 0.78rem; font-weight: 500; transition: var(--transition);
-    border: 1px solid var(--border); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    border: 1px solid var(--border); word-break: break-all;
 }
 .director-email-btn { background: var(--white); color: var(--text-muted); }
 .director-email-btn:hover { background: var(--unad-light); color: var(--unad-red); border-color: rgba(200,16,46,0.2); }
@@ -368,7 +354,6 @@ img { max-width: 100%; display: block; }
     .nav-link { padding: 12px 16px; }
     .courses-grid { grid-template-columns: 1fr; }
     .directors-grid { grid-template-columns: 1fr; }
-    .director-leader { max-width: 100%; }
     .event-card { flex-direction: column; gap: 16px; }
     .event-date { flex-direction: row; gap: 12px; min-width: auto; }
     .featured-event { padding: 32px 24px; }
