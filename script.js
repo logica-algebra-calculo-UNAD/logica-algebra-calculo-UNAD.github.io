@@ -172,6 +172,14 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(tick, 1000);
     }
 
+    // ===== IMAGE PROTECTION =====
+    document.addEventListener('contextmenu', e => {
+        if (e.target.tagName === 'IMG' || e.target.closest('.tm-av')) e.preventDefault();
+    });
+    document.addEventListener('dragstart', e => {
+        if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+
     // ===== SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
