@@ -3,280 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Curricular LAC &#8212; L&#243;gica, &#193;lgebra y C&#225;lculo &#8212; UNAD</title>
+    <title>Red Curricular de L&#243;gica, &#193;lgebra y C&#225;lculo &#8212; UNAD</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=General+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-orb" id="cursorOrb"></div>
 
-    <!-- Navigation -->
+    <!-- ====== NAV ====== -->
     <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="#inicio" class="nav-brand">
-                <svg class="brand-svg" viewBox="0 0 36 36" fill="none">
-                    <path d="M18 2L34 34H2L18 2Z" stroke="currentColor" stroke-width="1.2"/>
-                    <circle cx="18" cy="20" r="5" stroke="currentColor" stroke-width="1.2"/>
-                    <path d="M18 15v10" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
-                </svg>
-                <span class="brand-text">Red<strong>LAC</strong></span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+        <div class="nav-wrap">
+            <a href="#inicio" class="nav-logo"><span class="nav-logo-sym">&Sigma;</span> Red <b>LAC</b></a>
+            <button class="hamburger" id="hamburger" aria-label="Men&#250;"><span></span><span></span></button>
             <div class="nav-menu" id="navMenu">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#mision" class="nav-link">Misi&#243;n</a>
-                <a href="#cursos" class="nav-link">Cursos</a>
-                <a href="#equipo" class="nav-link">Equipo</a>
-                <a href="#eventos" class="nav-link">Eventos</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#contacto" class="nav-contact">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="hero" id="inicio">
-        <canvas id="mathCanvas"></canvas>
-        <div class="hero-noise"></div>
-        <div class="hero-vignette"></div>
-
-        <!-- Floating equations -->
-        <div class="hero-equations">
-            <div class="eq eq-1" data-speed="0.02">&#8747;<sub>a</sub><sup>b</sup> f(x)dx = F(b)-F(a)</div>
-            <div class="eq eq-2" data-speed="0.03">&#8711;&#178;&#966; = &#961;/&#949;</div>
-            <div class="eq eq-3" data-speed="0.015">e<sup>i&#960;</sup> + 1 = 0</div>
-            <div class="eq eq-4" data-speed="0.025">&#8706;f/&#8706;x = lim<sub>h&#8594;0</sub></div>
-            <div class="eq eq-5" data-speed="0.018">A &#8745; (B &#8746; C)</div>
-            <div class="eq eq-6" data-speed="0.022">&#8721;<sub>n=0</sub><sup>&#8734;</sup> a<sub>n</sub>x<sup>n</sup></div>
+    <!-- ====== HERO ====== -->
+    <header class="hero" id="inicio">
+        <!-- Animated gradient blob -->
+        <div class="blob-wrap" aria-hidden="true">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
         </div>
 
-        <div class="hero-content">
-            <div class="hero-overline" data-anim="fade-up" data-delay="0.3">
-                <span class="overline-dot"></span>
-                UNAD &#8212; Escuela de Ciencias B&#225;sicas, Tecnolog&#237;a e Ingenier&#237;a
+        <!-- Subtle grid overlay -->
+        <div class="grid-overlay" aria-hidden="true"></div>
+
+        <!-- Floating math glyphs -->
+        <div class="glyphs" aria-hidden="true">
+            <span style="--gx:8%;--gy:20%">&int;</span>
+            <span style="--gx:88%;--gy:18%">&part;</span>
+            <span style="--gx:14%;--gy:72%">&pi;</span>
+            <span style="--gx:82%;--gy:68%">&infin;</span>
+            <span style="--gx:50%;--gy:12%">&nabla;</span>
+            <span style="--gx:72%;--gy:82%">&lambda;</span>
+            <span style="--gx:28%;--gy:85%">&Delta;</span>
+            <span style="--gx:92%;--gy:42%">&Sigma;</span>
+        </div>
+
+        <div class="hero-inner">
+            <div class="hero-chip" data-v>
+                <span class="chip-dot"></span>
+                UNAD &middot; Escuela de Ciencias B&#225;sicas, Tecnolog&#237;a e Ingenier&#237;a
             </div>
-            <h1 class="hero-title" data-anim="fade-up" data-delay="0.5">
-                <span class="hero-title-sm">Red Curricular de</span>
-                <span class="hero-title-lg">
-                    <span class="word" data-word="logica">L&#243;gica<span class="word-ghost">L&#243;gica</span></span><span class="punct">,</span>
-                    <span class="word" data-word="algebra">&#193;lgebra<span class="word-ghost">&#193;lgebra</span></span>
+            <h1 class="hero-h1" data-v>
+                <span class="h1-pre">Red Curricular de</span>
+                <span class="h1-main">
+                    <span class="h1-word w-log">L&#243;gica</span><span class="h1-sep">,</span>
+                    <span class="h1-word w-alg">&#193;lgebra</span>
                 </span>
-                <span class="hero-title-lg">
-                    <span class="word-y">y</span>
-                    <span class="word" data-word="calculo">C&#225;lculo<span class="word-ghost">C&#225;lculo</span></span>
+                <span class="h1-main">
+                    <span class="h1-and">y</span>
+                    <span class="h1-word w-cal">C&#225;lculo</span>
                 </span>
             </h1>
-            <p class="hero-sub" data-anim="fade-up" data-delay="0.7">
-                Articulamos la formaci&#243;n matem&#225;tica con innovaci&#243;n pedag&#243;gica<br>
-                y excelencia acad&#233;mica en la educaci&#243;n a distancia.
-            </p>
-            <div class="hero-actions" data-anim="fade-up" data-delay="0.9">
-                <a href="#cursos" class="btn-primary">
-                    <span>Explorar Cursos</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
-                </a>
-                <a href="#eventos" class="btn-outline">Pr&#243;ximo Evento</a>
+            <p class="hero-sub" data-v>Articulamos la formaci&#243;n matem&#225;tica con innovaci&#243;n pedag&#243;gica y excelencia acad&#233;mica en la educaci&#243;n a distancia.</p>
+            <div class="hero-btns" data-v>
+                <a href="#cursos" class="btn-solid">Explorar Cursos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
+                <a href="#eventos" class="btn-glass">Pr&#243;ximo Evento</a>
             </div>
         </div>
 
-        <!-- Metrics bar -->
-        <div class="hero-bar" data-anim="fade-up" data-delay="1.1">
-            <div class="hb-stat">
-                <span class="hb-num" data-count="9">0</span>
-                <span class="hb-label">Cursos Acad&#233;micos</span>
-            </div>
-            <div class="hb-div"></div>
-            <div class="hb-stat">
-                <span class="hb-num" data-count="9">0</span>
-                <span class="hb-label">Directores Nacionales</span>
-            </div>
-            <div class="hb-div"></div>
-            <div class="hb-stat">
-                <span class="hb-num" data-count="3">0</span>
-                <span class="hb-label">Ejes Tem&#225;ticos</span>
-            </div>
+        <div class="hero-kpi" data-v>
+            <div class="kpi"><span class="kpi-n" data-count="9">0</span><span class="kpi-l">Cursos</span></div>
+            <div class="kpi-sep"></div>
+            <div class="kpi"><span class="kpi-n" data-count="9">0</span><span class="kpi-l">Directores</span></div>
+            <div class="kpi-sep"></div>
+            <div class="kpi"><span class="kpi-n" data-count="3">0</span><span class="kpi-l">Ejes</span></div>
         </div>
 
-        <div class="scroll-cue">
-            <div class="scroll-cue-text">Descubre</div>
-            <div class="scroll-cue-line"></div>
+        <div class="scroll-indicator" aria-hidden="true"><div class="scroll-dot"></div></div>
+    </header>
+
+    <!-- ====== ABOUT / MISSION ====== -->
+    <section class="s" id="nosotros">
+        <div class="container">
+            <div class="s-eyebrow" data-v><span class="ey-num">01</span><span class="ey-line"></span>Nuestra Misi&#243;n</div>
+            <div class="about-hero" data-v>
+                <h2>Construimos puentes entre el <em>pensamiento abstracto</em> y la <em>formaci&#243;n integral</em>.</h2>
+            </div>
+            <div class="cards-3">
+                <article class="acard" data-v>
+                    <div class="acard-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="6" y="6" width="15" height="15" rx="3"/><rect x="27" y="6" width="15" height="15" rx="3"/><rect x="6" y="27" width="15" height="15" rx="3"/><rect x="27" y="27" width="15" height="15" rx="3" stroke-dasharray="4 3" opacity="0.5"/></svg>
+                    </div>
+                    <h3>Articulaci&#243;n Curricular</h3>
+                    <p>Formaci&#243;n matem&#225;tica coherente y progresiva en todos los programas acad&#233;micos de la UNAD.</p>
+                </article>
+                <article class="acard" data-v>
+                    <div class="acard-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="18"/><ellipse cx="24" cy="24" rx="9" ry="18"/><path d="M6 24h36" opacity="0.3"/></svg>
+                    </div>
+                    <h3>Innovaci&#243;n Pedag&#243;gica</h3>
+                    <p>Estrategias did&#225;cticas mediadas por tecnolog&#237;a para el aprendizaje significativo a distancia.</p>
+                </article>
+                <article class="acard" data-v>
+                    <div class="acard-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="12" r="6"/><circle cx="12" cy="36" r="6"/><circle cx="36" cy="36" r="6"/><path d="M20 17l-6 14M28 17l6 14M16 36h16" opacity="0.3"/></svg>
+                    </div>
+                    <h3>Trabajo Colaborativo</h3>
+                    <p>Intercambio de experiencias entre directores para fortalecer la calidad acad&#233;mica de la red.</p>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- ==================== MISSION ==================== -->
-    <section class="sect" id="mision">
+    <!-- ====== COURSES (BENTO) ====== -->
+    <section class="s s-alt" id="cursos">
         <div class="container">
-            <div class="sect-tag" data-anim="fade-up"><span class="tag-num">01</span><span class="tag-line"></span><span>Nuestra Misi&#243;n</span></div>
-            <div class="mission-grid">
-                <div class="mission-text" data-anim="fade-up">
-                    <h2>Construimos puentes entre el <em>pensamiento abstracto</em> y la <em>formaci&#243;n integral</em> del estudiante.</h2>
+            <div class="s-eyebrow" data-v><span class="ey-num">02</span><span class="ey-line"></span>Oferta Acad&#233;mica</div>
+            <h2 class="s-heading" data-v>Nuestros Cursos</h2>
+            <div class="filter-row" data-v>
+                <button class="fbtn active" data-f="all">Todos</button>
+                <button class="fbtn" data-f="logica">L&#243;gica</button>
+                <button class="fbtn" data-f="algebra">&#193;lgebra</button>
+                <button class="fbtn" data-f="calculo">C&#225;lculo</button>
+            </div>
+            <div class="bento" id="bento">
+                <div class="bc bc-wide" data-cat="logica" data-v>
+                    <div class="bc-deco">&and; &or; &not;</div>
+                    <span class="bc-pill bc-pill-log">L&#243;gica</span>
+                    <h3>Pensamiento L&#243;gico y Matem&#225;tico</h3>
+                    <div class="bc-foot"><span class="bc-code">200611</span><span class="bc-dot">&middot;</span><span>Carolina Casta&#241;o G.</span></div>
+                    <a href="mailto:carolina.castano@unad.edu.co" class="bc-email">carolina.castano@unad.edu.co</a>
                 </div>
-                <div class="mission-cards">
-                    <article class="m-card" data-anim="fade-up" data-delay="0.1">
-                        <div class="m-card-num">01</div>
-                        <div class="m-card-icon">
-                            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2">
-                                <rect x="6" y="6" width="18" height="18" rx="2"/><rect x="32" y="6" width="18" height="18" rx="2"/><rect x="6" y="32" width="18" height="18" rx="2"/><rect x="32" y="32" width="18" height="18" rx="2" stroke-dasharray="4 3"/><path d="M24 15h8M15 24v8M41 24v8" opacity="0.35"/>
-                            </svg>
-                        </div>
-                        <h3>Articulaci&#243;n Curricular</h3>
-                        <p>Armonizamos contenidos para una formaci&#243;n matem&#225;tica coherente y progresiva en todos los programas acad&#233;micos de la UNAD.</p>
-                    </article>
-                    <article class="m-card" data-anim="fade-up" data-delay="0.2">
-                        <div class="m-card-num">02</div>
-                        <div class="m-card-icon">
-                            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2">
-                                <circle cx="28" cy="28" r="20"/><ellipse cx="28" cy="28" rx="10" ry="20"/><path d="M8 28h40" opacity="0.35"/><path d="M28 8v40" opacity="0.2"/>
-                            </svg>
-                        </div>
-                        <h3>Innovaci&#243;n Pedag&#243;gica</h3>
-                        <p>Estrategias did&#225;cticas innovadoras mediadas por tecnolog&#237;a para el aprendizaje significativo de las matem&#225;ticas a distancia.</p>
-                    </article>
-                    <article class="m-card" data-anim="fade-up" data-delay="0.3">
-                        <div class="m-card-num">03</div>
-                        <div class="m-card-icon">
-                            <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2">
-                                <circle cx="28" cy="14" r="6"/><circle cx="14" cy="38" r="6"/><circle cx="42" cy="38" r="6"/><path d="M24 19l-7 14M32 19l7 14M18 38h20" opacity="0.35"/>
-                            </svg>
-                        </div>
-                        <h3>Trabajo Colaborativo</h3>
-                        <p>Intercambio de experiencias y buenas pr&#225;cticas entre directores para fortalecer la calidad acad&#233;mica de toda la red.</p>
-                    </article>
+                <div class="bc" data-cat="logica" data-v>
+                    <div class="bc-deco">G=(V,E)</div>
+                    <span class="bc-pill bc-pill-log">L&#243;gica</span>
+                    <h3>Matem&#225;ticas Discretas</h3>
+                    <div class="bc-foot"><span class="bc-code">204041</span><span class="bc-dot">&middot;</span><span>Luis G. Argoty H.</span></div>
+                    <a href="mailto:luis.argoty@unad.edu.co" class="bc-email">luis.argoty@unad.edu.co</a>
+                </div>
+                <div class="bc" data-cat="algebra" data-v>
+                    <div class="bc-deco">a&sup2;+b&sup2;</div>
+                    <span class="bc-pill bc-pill-alg">&#193;lgebra</span>
+                    <h3>Fundamentos de Matem&#225;ticas</h3>
+                    <div class="bc-foot"><span class="bc-code">200612</span><span class="bc-dot">&middot;</span><span>Aura E. Quesada S.</span></div>
+                    <a href="mailto:aura.quesada@unad.edu.co" class="bc-email">aura.quesada@unad.edu.co</a>
+                </div>
+                <div class="bc bc-wide" data-cat="algebra" data-v>
+                    <div class="bc-deco">sin&sup2;+cos&sup2;=1</div>
+                    <span class="bc-pill bc-pill-alg">&#193;lgebra</span>
+                    <h3>&#193;lgebra, Trigonometr&#237;a y Geometr&#237;a Anal&#237;tica</h3>
+                    <div class="bc-foot"><span class="bc-code">301301</span><span class="bc-dot">&middot;</span><span>Leidy V. Cort&#233;s R.</span></div>
+                    <a href="mailto:leidy.cortes@unad.edu.co" class="bc-email">leidy.cortes@unad.edu.co</a>
+                </div>
+                <div class="bc" data-cat="calculo" data-v>
+                    <div class="bc-deco">f'(x)</div>
+                    <span class="bc-pill bc-pill-cal">C&#225;lculo</span>
+                    <h3>C&#225;lculo Diferencial</h3>
+                    <div class="bc-foot"><span class="bc-code">100410</span><span class="bc-dot">&middot;</span><span>Gustavo Salazar C.</span></div>
+                    <a href="mailto:gustavo.salazar@unad.edu.co" class="bc-email">gustavo.salazar@unad.edu.co</a>
+                </div>
+                <div class="bc" data-cat="calculo" data-v>
+                    <div class="bc-deco">&int;f(x)dx</div>
+                    <span class="bc-pill bc-pill-cal">C&#225;lculo</span>
+                    <h3>C&#225;lculo Integral</h3>
+                    <div class="bc-foot"><span class="bc-code">100411</span><span class="bc-dot">&middot;</span><span>Alexis Trujillo G.</span></div>
+                    <a href="mailto:alexis.trujillo@unad.edu.co" class="bc-email">alexis.trujillo@unad.edu.co</a>
+                </div>
+                <div class="bc" data-cat="calculo" data-v>
+                    <div class="bc-deco">&part;f/&part;x</div>
+                    <span class="bc-pill bc-pill-cal">C&#225;lculo</span>
+                    <h3>C&#225;lculo Multivariado</h3>
+                    <div class="bc-foot"><span class="bc-code">203057</span><span class="bc-dot">&middot;</span><span>Adriana M. Fonce C.</span></div>
+                    <a href="mailto:adriana.fonce@unad.edu.co" class="bc-email">adriana.fonce@unad.edu.co</a>
+                </div>
+                <div class="bc bc-wide" data-cat="calculo" data-v>
+                    <div class="bc-deco">lim<sub>x&rarr;a</sub></div>
+                    <span class="bc-pill bc-pill-cal">C&#225;lculo</span>
+                    <h3>C&#225;lculo Univariado</h3>
+                    <div class="bc-foot"><span class="bc-code">202446763</span><span class="bc-dot">&middot;</span><span>Hugo L&#243;pez A.</span></div>
+                    <a href="mailto:hugo.lopeza@unad.edu.co" class="bc-email">hugo.lopeza@unad.edu.co</a>
+                </div>
+                <div class="bc" data-cat="calculo" data-v>
+                    <div class="bc-deco">y''+py=0</div>
+                    <span class="bc-pill bc-pill-cal">C&#225;lculo</span>
+                    <h3>Ecuaciones Diferenciales</h3>
+                    <div class="bc-foot"><span class="bc-code">100412</span><span class="bc-dot">&middot;</span><span>Daniel S. Mor&#225;n P.</span></div>
+                    <a href="mailto:daniel.moran@unad.edu.co" class="bc-email">daniel.moran@unad.edu.co</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== COURSES ==================== -->
-    <section class="sect sect-dark" id="cursos">
+    <!-- ====== TEAM ====== -->
+    <section class="s" id="equipo">
         <div class="container">
-            <div class="sect-tag sect-tag-light" data-anim="fade-up"><span class="tag-num">02</span><span class="tag-line"></span><span>Oferta Acad&#233;mica</span></div>
-            <h2 class="sect-title sect-title-light" data-anim="fade-up">Nuestros Cursos</h2>
-            <div class="filter-bar" data-anim="fade-up">
-                <button class="filter-btn active" data-filter="all">Todos <span>9</span></button>
-                <button class="filter-btn" data-filter="logica">L&#243;gica <span>2</span></button>
-                <button class="filter-btn" data-filter="algebra">&#193;lgebra <span>2</span></button>
-                <button class="filter-btn" data-filter="calculo">C&#225;lculo <span>5</span></button>
-            </div>
-            <div class="courses-mosaic" id="coursesMosaic">
-                <div class="c-card" data-cat="logica" data-anim="fade-up"><div class="c-formula">&#8743; &#8744; &#172;</div><div class="c-tag c-tag-log">L&#243;gica</div><h3>Pensamiento L&#243;gico y Matem&#225;tico</h3><div class="c-meta"><span class="c-code">200611</span><span>Carolina Casta&#241;o G.</span></div><a href="mailto:carolina.castano@unad.edu.co" class="c-mail">carolina.castano@unad.edu.co</a></div>
-                <div class="c-card" data-cat="logica" data-anim="fade-up"><div class="c-formula">G=(V,E)</div><div class="c-tag c-tag-log">L&#243;gica</div><h3>Matem&#225;ticas Discretas</h3><div class="c-meta"><span class="c-code">204041</span><span>Luis G. Argoty H.</span></div><a href="mailto:luis.argoty@unad.edu.co" class="c-mail">luis.argoty@unad.edu.co</a></div>
-                <div class="c-card" data-cat="algebra" data-anim="fade-up"><div class="c-formula">a&#178;+b&#178;=c&#178;</div><div class="c-tag c-tag-alg">&#193;lgebra</div><h3>Fundamentos de Matem&#225;ticas</h3><div class="c-meta"><span class="c-code">200612</span><span>Aura E. Quesada S.</span></div><a href="mailto:aura.quesada@unad.edu.co" class="c-mail">aura.quesada@unad.edu.co</a></div>
-                <div class="c-card" data-cat="algebra" data-anim="fade-up"><div class="c-formula">sin&#178;&#952;+cos&#178;&#952;=1</div><div class="c-tag c-tag-alg">&#193;lgebra</div><h3>&#193;lgebra, Trigonometr&#237;a y Geometr&#237;a Anal&#237;tica</h3><div class="c-meta"><span class="c-code">301301</span><span>Leidy V. Cort&#233;s R.</span></div><a href="mailto:leidy.cortes@unad.edu.co" class="c-mail">leidy.cortes@unad.edu.co</a></div>
-                <div class="c-card" data-cat="calculo" data-anim="fade-up"><div class="c-formula">f'(x)=lim</div><div class="c-tag c-tag-cal">C&#225;lculo</div><h3>C&#225;lculo Diferencial</h3><div class="c-meta"><span class="c-code">100410</span><span>Gustavo Salazar C.</span></div><a href="mailto:gustavo.salazar@unad.edu.co" class="c-mail">gustavo.salazar@unad.edu.co</a></div>
-                <div class="c-card" data-cat="calculo" data-anim="fade-up"><div class="c-formula">&#8747;f(x)dx</div><div class="c-tag c-tag-cal">C&#225;lculo</div><h3>C&#225;lculo Integral</h3><div class="c-meta"><span class="c-code">100411</span><span>Alexis Trujillo G.</span></div><a href="mailto:alexis.trujillo@unad.edu.co" class="c-mail">alexis.trujillo@unad.edu.co</a></div>
-                <div class="c-card" data-cat="calculo" data-anim="fade-up"><div class="c-formula">&#8706;f/&#8706;x</div><div class="c-tag c-tag-cal">C&#225;lculo</div><h3>C&#225;lculo Multivariado</h3><div class="c-meta"><span class="c-code">203057</span><span>Adriana M. Fonce C.</span></div><a href="mailto:adriana.fonce@unad.edu.co" class="c-mail">adriana.fonce@unad.edu.co</a></div>
-                <div class="c-card" data-cat="calculo" data-anim="fade-up"><div class="c-formula">lim<sub>x&#8594;a</sub></div><div class="c-tag c-tag-cal">C&#225;lculo</div><h3>C&#225;lculo Univariado</h3><div class="c-meta"><span class="c-code">202446763</span><span>Hugo L&#243;pez A.</span></div><a href="mailto:hugo.lopeza@unad.edu.co" class="c-mail">hugo.lopeza@unad.edu.co</a></div>
-                <div class="c-card" data-cat="calculo" data-anim="fade-up"><div class="c-formula">y''+py=0</div><div class="c-tag c-tag-cal">C&#225;lculo</div><h3>Ecuaciones Diferenciales</h3><div class="c-meta"><span class="c-code">100412</span><span>Daniel S. Mor&#225;n P.</span></div><a href="mailto:daniel.moran@unad.edu.co" class="c-mail">daniel.moran@unad.edu.co</a></div>
+            <div class="s-eyebrow" data-v><span class="ey-num">03</span><span class="ey-line"></span>Nuestro Equipo</div>
+            <h2 class="s-heading" data-v>Directores de Curso</h2>
+            <div class="team">
+                <div class="tm" data-v><div class="tm-av tm-av-init"><span>JLP</span></div><div class="tm-info"><span class="tm-badge">L&#237;der de Cadena</span><h3>Jadileyg Gabriela Le&#243;n P&#233;rez</h3></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Daniel Steven Moran Pizarro.jpg" alt="" loading="lazy"></div><div class="tm-info"><span class="tm-badge">L&#237;der Red Curricular</span><h3>Daniel Steven Mor&#225;n Pizarro</h3><p class="tm-role">Dir. Nal. Ecuaciones Diferenciales</p><div class="tm-links"><a href="mailto:daniel.moran@unad.edu.co" class="tm-email">daniel.moran@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001560327" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Adriana Fonce.jpg" alt="" loading="lazy"></div><div class="tm-info"><h3>Adriana Marcela Fonce Camacho</h3><p class="tm-role">Directora Nal. C&#225;lculo Multivariado</p><div class="tm-links"><a href="mailto:adriana.fonce@unad.edu.co" class="tm-email">adriana.fonce@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001643838" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Alexis Trujillo Garc&#237;a.png" alt="" loading="lazy"></div><div class="tm-info"><h3>Alexis Trujillo Garc&#237;a</h3><p class="tm-role">Director Nal. C&#225;lculo Integral</p><div class="tm-links"><a href="mailto:alexis.trujillo@unad.edu.co" class="tm-email">alexis.trujillo@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000034587" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Aura Elisa Quesada.jpeg" alt="" loading="lazy"></div><div class="tm-info"><h3>Aura Elisa Quesada Sep&#250;lveda</h3><p class="tm-role">Directora Nal. Fundamentos de Matem&#225;ticas</p><div class="tm-links"><a href="mailto:aura.quesada@unad.edu.co" class="tm-email">aura.quesada@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000145797" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Carolina Casta&#241;o.png" alt="" loading="lazy"></div><div class="tm-info"><h3>Carolina Casta&#241;o Guti&#233;rrez</h3><p class="tm-role">Directora Nal. Pensamiento L&#243;gico y Matem&#225;tico</p><div class="tm-links"><a href="mailto:carolina.castano@unad.edu.co" class="tm-email">carolina.castano@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000869821" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av tm-av-init"><span>GSC</span></div><div class="tm-info"><h3>Gustavo Salazar Cede&#241;o</h3><p class="tm-role">Director Nal. C&#225;lculo Diferencial</p><div class="tm-links"><a href="mailto:gustavo.salazar@unad.edu.co" class="tm-email">gustavo.salazar@unad.edu.co</a><span class="tm-na">CvLAC: Sin info</span></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Hugo L&#243;pez Aranda.png" alt="" loading="lazy"></div><div class="tm-info"><h3>Hugo L&#243;pez Aranda</h3><p class="tm-role">Director Nal. C&#225;lculo Univariado</p><div class="tm-links"><a href="mailto:hugo.lopeza@unad.edu.co" class="tm-email">hugo.lopeza@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000157075" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Leidy Vanessa Cort&#233;s.png" alt="" loading="lazy"></div><div class="tm-info"><h3>Leidy Vanessa Cort&#233;s Ramos</h3><p class="tm-role">Dir. Nal. &#193;lgebra, Trigonometr&#237;a y G. Anal&#237;tica</p><div class="tm-links"><a href="mailto:leidy.cortes@unad.edu.co" class="tm-email">leidy.cortes@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001722662" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
+                <div class="tm" data-v><div class="tm-av"><img src="Foto Luis Gerardo Argoty.jpg" alt="" loading="lazy"></div><div class="tm-info"><h3>Luis Gerardo Argoty Hidalgo</h3><p class="tm-role">Director Nal. Matem&#225;ticas Discretas</p><div class="tm-links"><a href="mailto:luis.argoty@unad.edu.co" class="tm-email">luis.argoty@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000161764" target="_blank" class="tm-cv">CvLAC &nearr;</a></div></div></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== TEAM ==================== -->
-    <section class="sect" id="equipo">
+    <!-- ====== EVENTS ====== -->
+    <section class="s s-alt" id="eventos">
         <div class="container">
-            <div class="sect-tag" data-anim="fade-up"><span class="tag-num">03</span><span class="tag-line"></span><span>Nuestro Equipo</span></div>
-            <h2 class="sect-title" data-anim="fade-up">Directores de Curso</h2>
-            <div class="team-grid">
-                <div class="t-card" data-anim="fade-up"><div class="t-img t-img-init"><span>JLP</span></div><div class="t-body"><span class="t-badge">L&#237;der de Cadena</span><h3>Jadileyg Gabriela Le&#243;n P&#233;rez</h3></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Daniel Steven Moran Pizarro.jpg" alt="Daniel Mor&#225;n" loading="lazy"></div><div class="t-body"><span class="t-badge">L&#237;der Red Curricular</span><h3>Daniel Steven Mor&#225;n Pizarro</h3><p class="t-role">Dir. Nal. Ecuaciones Diferenciales</p><div class="t-links"><a href="mailto:daniel.moran@unad.edu.co" class="t-link-mail">daniel.moran@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001560327" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Adriana Fonce.jpg" alt="Adriana Fonce" loading="lazy"></div><div class="t-body"><h3>Adriana Marcela Fonce Camacho</h3><p class="t-role">Dir. Nal. C&#225;lculo Multivariado</p><div class="t-links"><a href="mailto:adriana.fonce@unad.edu.co" class="t-link-mail">adriana.fonce@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001643838" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Alexis Trujillo Garc&#237;a.png" alt="Alexis Trujillo" loading="lazy"></div><div class="t-body"><h3>Alexis Trujillo Garc&#237;a</h3><p class="t-role">Dir. Nal. C&#225;lculo Integral</p><div class="t-links"><a href="mailto:alexis.trujillo@unad.edu.co" class="t-link-mail">alexis.trujillo@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000034587" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Aura Elisa Quesada.jpeg" alt="Aura Quesada" loading="lazy"></div><div class="t-body"><h3>Aura Elisa Quesada Sep&#250;lveda</h3><p class="t-role">Dir. Nal. Fundamentos de Matem&#225;ticas</p><div class="t-links"><a href="mailto:aura.quesada@unad.edu.co" class="t-link-mail">aura.quesada@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000145797" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Carolina Casta&#241;o.png" alt="Carolina Casta&#241;o" loading="lazy"></div><div class="t-body"><h3>Carolina Casta&#241;o Guti&#233;rrez</h3><p class="t-role">Dir. Nal. Pensamiento L&#243;gico y Matem&#225;tico</p><div class="t-links"><a href="mailto:carolina.castano@unad.edu.co" class="t-link-mail">carolina.castano@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000869821" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img t-img-init"><span>GSC</span></div><div class="t-body"><h3>Gustavo Salazar Cede&#241;o</h3><p class="t-role">Dir. Nal. C&#225;lculo Diferencial</p><div class="t-links"><a href="mailto:gustavo.salazar@unad.edu.co" class="t-link-mail">gustavo.salazar@unad.edu.co</a><span class="t-no-cv">CvLAC: Sin info</span></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Hugo L&#243;pez Aranda.png" alt="Hugo L&#243;pez" loading="lazy"></div><div class="t-body"><h3>Hugo L&#243;pez Aranda</h3><p class="t-role">Dir. Nal. C&#225;lculo Univariado</p><div class="t-links"><a href="mailto:hugo.lopeza@unad.edu.co" class="t-link-mail">hugo.lopeza@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000157075" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Leidy Vanessa Cort&#233;s.png" alt="Leidy Cort&#233;s" loading="lazy"></div><div class="t-body"><h3>Leidy Vanessa Cort&#233;s Ramos</h3><p class="t-role">Dir. Nal. &#193;lgebra, Trigonometr&#237;a y G. Anal&#237;tica</p><div class="t-links"><a href="mailto:leidy.cortes@unad.edu.co" class="t-link-mail">leidy.cortes@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001722662" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-                <div class="t-card" data-anim="fade-up"><div class="t-img"><img src="Foto Luis Gerardo Argoty.jpg" alt="Luis Argoty" loading="lazy"></div><div class="t-body"><h3>Luis Gerardo Argoty Hidalgo</h3><p class="t-role">Dir. Nal. Matem&#225;ticas Discretas</p><div class="t-links"><a href="mailto:luis.argoty@unad.edu.co" class="t-link-mail">luis.argoty@unad.edu.co</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000161764" target="_blank" class="t-link-cv">CvLAC &#8599;</a></div></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== EVENTS ==================== -->
-    <section class="sect sect-dark" id="eventos">
-        <div class="container">
-            <div class="sect-tag sect-tag-light" data-anim="fade-up"><span class="tag-num">04</span><span class="tag-line"></span><span>Agenda</span></div>
-            <h2 class="sect-title sect-title-light" data-anim="fade-up">Eventos</h2>
-
-            <div class="evt-hero" id="featuredEvent" data-event-date="2026-04-09T08:00:00" data-event-end="2026-04-10T18:00:00" data-anim="fade-up">
-                <div class="evt-hero-bg">
-                    <div class="evt-particle" style="--i:0"></div>
-                    <div class="evt-particle" style="--i:1"></div>
-                    <div class="evt-particle" style="--i:2"></div>
-                    <div class="evt-particle" style="--i:3"></div>
-                    <div class="evt-particle" style="--i:4"></div>
-                </div>
-                <div class="evt-hero-inner">
-                    <span class="evt-label">&#9733; Pr&#243;ximo Evento</span>
+            <div class="s-eyebrow" data-v><span class="ey-num">04</span><span class="ey-line"></span>Agenda</div>
+            <h2 class="s-heading" data-v>Eventos</h2>
+            <div class="evt-card" id="featuredEvent" data-event-date="2026-04-09T08:00:00" data-event-end="2026-04-10T18:00:00" data-v>
+                <div class="evt-card-blob"></div>
+                <div class="evt-card-inner">
+                    <span class="evt-badge">&#9733; Pr&#243;ximo Evento</span>
                     <h3>Ciclo de Conferencias Matem&#225;ticas</h3>
                     <p class="evt-subtitle">Evento de la Red Curricular de L&#243;gica, &#193;lgebra y C&#225;lculo</p>
-                    <div class="evt-info">
-                        <span>&#128197; 9 y 10 de Abril, 2026</span>
-                        <span>&#128205; Virtual &#8212; UNAD</span>
-                    </div>
-                    <p class="evt-desc">Jornada con expertos nacionales e internacionales sobre tendencias y avances en la ense&#241;anza de la L&#243;gica, el &#193;lgebra y el C&#225;lculo.</p>
+                    <div class="evt-meta"><span>&#128197; 9 y 10 de Abril, 2026</span><span>&#128205; Virtual &#8212; UNAD</span></div>
+                    <p class="evt-body">Jornada con expertos nacionales e internacionales sobre tendencias y avances en la ense&#241;anza de la L&#243;gica, el &#193;lgebra y el C&#225;lculo.</p>
                     <div class="countdown" id="countdown">
-                        <div class="cd-unit"><span class="cd-val" id="countDays">00</span><span class="cd-lbl">D&#237;as</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="countDays">00</span><span class="cd-txt">D&#237;as</span></div>
                         <div class="cd-colon">:</div>
-                        <div class="cd-unit"><span class="cd-val" id="countHours">00</span><span class="cd-lbl">Hrs</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="countHours">00</span><span class="cd-txt">Hrs</span></div>
                         <div class="cd-colon">:</div>
-                        <div class="cd-unit"><span class="cd-val" id="countMinutes">00</span><span class="cd-lbl">Min</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="countMinutes">00</span><span class="cd-txt">Min</span></div>
                         <div class="cd-colon">:</div>
-                        <div class="cd-unit"><span class="cd-val" id="countSeconds">00</span><span class="cd-lbl">Seg</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="countSeconds">00</span><span class="cd-txt">Seg</span></div>
                     </div>
                     <div id="countdownStatus" class="cd-status"></div>
                 </div>
             </div>
-
-            <div class="evt-list">
-                <div class="evt-item" data-anim="fade-up"><div class="evt-dot"></div><div><span class="evt-tag-sm">Recurrente</span><h4>Reuniones Peri&#243;dicas de la Red Curricular</h4><p>Sesiones de trabajo colaborativo para revisi&#243;n y mejora continua de contenidos y estrategias pedag&#243;gicas.</p></div></div>
-                <div class="evt-item" data-anim="fade-up"><div class="evt-dot"></div><div><span class="evt-tag-sm">Recurrente</span><h4>Seminarios de Actualizaci&#243;n en Matem&#225;ticas</h4><p>Formaci&#243;n continua para tutores y directores sobre tendencias en ense&#241;anza de las matem&#225;ticas.</p></div></div>
+            <div class="evt-mini-row">
+                <div class="evt-mini" data-v><div class="evt-mini-dot"></div><div><span class="evt-mini-tag">Recurrente</span><h4>Reuniones Peri&#243;dicas de la Red</h4><p>Sesiones de trabajo colaborativo para revisi&#243;n y mejora de contenidos y estrategias pedag&#243;gicas.</p></div></div>
+                <div class="evt-mini" data-v><div class="evt-mini-dot"></div><div><span class="evt-mini-tag">Recurrente</span><h4>Seminarios de Actualizaci&#243;n</h4><p>Formaci&#243;n continua para tutores y directores sobre tendencias en ense&#241;anza de matem&#225;ticas.</p></div></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== CONTACT ==================== -->
-    <section class="sect" id="contacto">
+    <!-- ====== CONTACT ====== -->
+    <section class="s" id="contacto">
         <div class="container">
-            <div class="sect-tag" data-anim="fade-up"><span class="tag-num">05</span><span class="tag-line"></span><span>Contacto</span></div>
-            <div class="contact-split" data-anim="fade-up">
+            <div class="s-eyebrow" data-v><span class="ey-num">05</span><span class="ey-line"></span>Contacto</div>
+            <div class="contact-grid" data-v>
                 <div class="contact-left">
                     <h2>&#191;Tienes preguntas o propuestas?</h2>
-                    <p>La Red Curricular de L&#243;gica, &#193;lgebra y C&#225;lculo hace parte de la Escuela de Ciencias B&#225;sicas, Tecnolog&#237;a e Ingenier&#237;a (ECBTI) de la UNAD.</p>
-                    <div class="contact-info-list">
-                        <div class="ci-item"><span class="ci-ico">&#127760;</span><div><strong>UNAD</strong><span>www.unad.edu.co</span></div></div>
-                        <div class="ci-item"><span class="ci-ico">&#128205;</span><div><strong>Sede Nacional</strong><span>Bogot&#225; D.C., Colombia</span></div></div>
-                    </div>
+                    <p>La Red Curricular hace parte de la ECBTI de la Universidad Nacional Abierta y a Distancia.</p>
+                    <div class="contact-bits"><div class="cb"><span class="cb-ico">&#127760;</span><div><strong>UNAD</strong><span>www.unad.edu.co</span></div></div><div class="cb"><span class="cb-ico">&#128205;</span><div><strong>Sede Nacional</strong><span>Bogot&#225; D.C., Colombia</span></div></div></div>
                 </div>
-                <div class="contact-right">
-                    <div class="contact-box">
-                        <div class="cb-symbol">&#8721;</div>
-                        <h3>ECBTI</h3>
-                        <p>Escuela de Ciencias B&#225;sicas, Tecnolog&#237;a e Ingenier&#237;a</p>
-                        <a href="https://academia.unad.edu.co/ecbti" target="_blank" class="btn-primary"><span>Visitar ECBTI</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
-                    </div>
+                <div class="contact-cta-box">
+                    <div class="cta-sym">&Sigma;</div>
+                    <h3>ECBTI</h3>
+                    <p>Escuela de Ciencias B&#225;sicas, Tecnolog&#237;a e Ingenier&#237;a</p>
+                    <a href="https://academia.unad.edu.co/ecbti" target="_blank" class="btn-solid">Visitar ECBTI <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7l7 7-7 7"/></svg></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ====== FOOTER ====== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <div class="footer-brand">
-                    <svg class="brand-svg" viewBox="0 0 36 36" fill="none"><path d="M18 2L34 34H2L18 2Z" stroke="currentColor" stroke-width="1.2"/><circle cx="18" cy="20" r="5" stroke="currentColor" stroke-width="1.2"/></svg>
-                    <div><strong>Red Curricular LAC</strong><br><span class="footer-sub">UNAD &#8212; Colombia</span></div>
-                </div>
-                <div class="footer-nav">
-                    <a href="#inicio">Inicio</a><a href="#mision">Misi&#243;n</a><a href="#cursos">Cursos</a><a href="#equipo">Equipo</a><a href="#eventos">Eventos</a>
-                </div>
+                <div class="footer-brand"><span class="nav-logo-sym">&Sigma;</span><div><strong>Red Curricular LAC</strong><br><span class="footer-sub">UNAD &#8212; Colombia</span></div></div>
+                <div class="footer-links"><a href="#inicio">Inicio</a><a href="#nosotros">Misi&#243;n</a><a href="#cursos">Cursos</a><a href="#equipo">Equipo</a><a href="#eventos">Eventos</a></div>
             </div>
-            <div class="footer-bot">&#169; 2026 Red Curricular de L&#243;gica, &#193;lgebra y C&#225;lculo &#8212; Universidad Nacional Abierta y a Distancia</div>
+            <div class="footer-bottom">&copy; 2026 Red Curricular de L&#243;gica, &#193;lgebra y C&#225;lculo &#8212; Universidad Nacional Abierta y a Distancia</div>
         </div>
     </footer>
 
