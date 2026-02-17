@@ -39,6 +39,10 @@ body {
 a { color: inherit; text-decoration: none; }
 .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
 
+/* Image protection */
+img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
+.tm-av, .tm-av img { pointer-events: none; }
+
 /* ===================================================
    NAVIGATION
    =================================================== */
