@@ -146,9 +146,12 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 }
 
 /* Animated math curve SVG */
+.curve-wrap {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1; pointer-events: none; overflow: hidden;
+}
 .hero-curve {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    z-index: 1; pointer-events: none;
+    display: block; width: 100%; height: 100%;
 }
 .curve-line {
     fill: none; stroke-linecap: round;
