@@ -594,7 +594,7 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 /* Seminario featured mini card with image */
 .evt-mini-feat { flex-direction: column; gap: 0; padding: 0; overflow: hidden; }
 .evt-mini-feat > div:last-child { padding: 20px 24px; }
-.evt-mini-img { width: 100%; height: 180px; overflow: hidden; }
+.evt-mini-img { width: 100%; aspect-ratio: 16 / 4; overflow: hidden; }
 .evt-mini-img img {
     width: 100%; height: 100%; object-fit: cover;
     pointer-events: none; -webkit-user-drag: none; user-select: none;
