@@ -89,12 +89,15 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 @media (max-width: 768px) {
     .hamburger { display: block; }
     .nav-menu {
-        position: fixed; inset: 0; background: var(--cream);
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 105; background: var(--cream);
         flex-direction: column; justify-content: center; align-items: center; gap: 8px;
-        opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease);
+        transform: translateX(100%); opacity: 0;
+        transition: transform 0.45s var(--ease), opacity 0.35s;
+        overflow-y: auto; -webkit-overflow-scrolling: touch;
     }
-    .nav-menu.open { opacity: 1; pointer-events: all; }
-    .nav-menu a { font-size: 1.3rem; padding: 14px 28px; }
+    .nav-menu.open { transform: translateX(0); opacity: 1; }
+    .nav-menu a { font-size: 1.3rem; padding: 14px 28px; width: auto; }
     .nav-contact { margin-left: 0 !important; margin-top: 16px; font-size: 1rem !important; padding: 14px 36px !important; border-radius: 14px !important; }
 }
 
@@ -140,6 +143,47 @@ img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
     50%  { border-radius: 38% 62% 55% 45% / 60% 38% 62% 40%; transform: translate(-20px, 20px) scale(0.97); }
     75%  { border-radius: 62% 38% 42% 58% / 45% 55% 45% 55%; transform: translate(15px, 10px) scale(1.03); }
     100% { border-radius: 45% 55% 58% 42% / 55% 42% 58% 45%; transform: translate(-10px, -15px) scale(1); }
+}
+
+/* Animated math curve SVG */
+.hero-curve {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    z-index: 1; pointer-events: none;
+}
+.curve-line {
+    fill: none; stroke-linecap: round;
+    stroke-dasharray: 2400; stroke-dashoffset: 2400;
+    animation: draw-curve 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.curve-1 { animation-delay: 0.5s; }
+.curve-2 { animation-delay: 1.0s; animation-duration: 4s; }
+.curve-3 { animation-delay: 1.5s; animation-duration: 4.5s; }
+@keyframes draw-curve {
+    to { stroke-dashoffset: 0; }
+}
+.axis-line {
+    stroke-dasharray: 1440; stroke-dashoffset: 1440;
+    animation: draw-curve 2s ease-out 0.3s forwards;
+}
+.axis-v { stroke-dasharray: 800; stroke-dashoffset: 800; }
+.curve-dot { animation: dot-pop 0.5s var(--ease) forwards; }
+.cd-1 { animation-delay: 2.5s; }
+.cd-2 { animation-delay: 3.0s; }
+.cd-3 { animation-delay: 3.5s; }
+@keyframes dot-pop { to { opacity: 0.35; } }
+
+/* Clip-path text reveal */
+.reveal-clip {
+    display: inline-block; overflow: hidden; vertical-align: bottom;
+}
+.reveal-clip > * {
+    display: inline-block;
+    animation: clip-rise 0.9s var(--ease) both;
+    animation-delay: var(--d, 0.5s);
+}
+@keyframes clip-rise {
+    from { transform: translateY(110%); }
+    to { transform: translateY(0); }
 }
 
 /* Subtle grid */
